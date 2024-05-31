@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+<head><!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="./politics.css">
+      
+  
+      <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+      <!-- bootstrap css file -->
+      <link rel="stylesheet" href="./css/bootstrap.min.css">
+  
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+      />
+      
+      <title> Politics Matters</title>
+             
+  </head>
+  <body>
+  
+      
+  <body class="body scroll-bar">
+        
+       <!-- <img src="poli pic2.jpg" alt="picture"> -->
+  
+      <div class="d-none" id="headerDiv"></div>
+      <header id="primaryMenu" class="bg-success header-padding">
+          <div class="container-fluid">
+              <div class="d-none d-md-block">
+                  <div class="row align-items-center no-gutters desktop-header">
+                      <div class="col-1">
+                        <a href="#" class="brand d-inline-block text-white">
+                          <img
+                          class="img-fluid"
+                           src="../e-la.svg"
+                        />
+                      
+                                  <h3></h3>
+                          </a>
+                      </div>
+                      
+                      <div class="col-6">
+                          <ul class="
+                auth-container
+                d-flex
+                align-items-center
+                justify-content-center
+              ">
+              
+              <li class="auth-btn mx-2">
+                  <a href="/about-us/" class="
+    auth-btn-link
+    d-block
+    text-white
+    bold
+    {%
+    if
+    navbar
+    ==
+    'aboutus'
+    %}active{%
+    endif
+    %}
+  ">About Us</a
+  >
+   </li>
+  
+            <li class="auth-btn mx-2">
+                <a href="/Registered-Students/" class="
+  auth-btn-link
+  d-block
+  text-white
+  bold
+  {%
+  if
+  navbar
+  ==
+  'aboutus'
+  %}active{%
+  endif
+  %}
+  ">Registered Students</a
+  >
+  </li>
+  
+  <li class="auth-btn mx-2">
+      
+  </li>
+  <a
+  href="courses.html"
+  class="
+    auth-btn-link
+    d-block
+    text-white
+    bold
+    {%
+    if
+    navbar
+    ==
+    'courses'
+    %}active{%
+    endif
+    %}
+  "
+  >Courses</a
+                >
+              </li>
+            </ul>
+          </div>
+  
+          <div class="col position-relative">
+            <div class="search-container d-flex bg-white">
+              <form id="searchForm" action="/search" autocomplete="on" class="w-100">
+                <input type="hidden" name="csrfmiddlewaretoken" value="b3ByIwAo5kI8JWT1g96rxawifpLs3VBF4ejeTYOHMfk69F3szDO3JbKGPUkDcvUP">
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control search p-0 pl-3 h-100"
+                  id="searchInput"
+                  placeholder="search course"
+                />
+              </form>
+              <div
+                class="
+                  search-icon
+                  d-flex
+                  align-items-center
+                  justify-content-center
+                  p-3
+                "
+              >
+              </div>
+            </div>
+            <div id="searchResult" class="position-absolute box-shadow">
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <ul
+              class="
+                auth-container
+                d-flex
+                align-items-center
+                justify-content-center
+              "
+            >
+              
+              <li class="auth-btn mx-2">
+                <a
+                  href="login.html"
+                  class="auth-btn-link d-block text-white"
+                  >login</a
+                >
+                
+              </li>
+  
+              <li class="auth-btn mx-3">
+                <a
+                  href="register.html"
+                  class="auth-btn-link d-block text-white"
+                  >Register</a
+                >
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="no-gutters mobile-header d-block d-md-none">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="">
+            <a href="/" class="brand d-inline-block w-75">
+            </a>
+                      </div>
+  
+                      <div class="">
+                          <div class="menu-bar-icon d-flex">
+                              <div class="search-btn icon m-3" id="searchBtn">
+          
+                              </div>
+                              <div class="menu-btn icon m-3" id="menuBtn">
+          
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div id="searchBar" class="d-none pt-3">
+                      <div class="search-container d-flex bg-white">
+                          <form id="searchForm" autocomplete="off">
+                              <input type="hidden" name="csrfmiddlewaretoken" value="b3ByIwAo5kI8JWT1g96rxawifpLs3VBF4ejeTYOHMfk69F3szDO3JbKGPUkDcvUP">
+                              <input type="text" name="search" class="form-control search p-0 pl-3 h-100" id="searchInput" placeholder="find course ..." />
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+  
+          <div class="vh-100 mobile-menu-container" id="mobileMenuContainer">
+              <ul class="auth-container">
+                  <li class="auth-btn mx-2">
+                      <a href="/mobilemenu.html/" class="
+              auth-btn-link
+              d-block
+              text-white
+              bold
+              {%
+              if
+              navbar
+              ==
+              'home'
+              %}active{%
+              endif
+              %}
+            ">
+            Home
+          </a>
+                  </li>
+  
+                  <li class="auth-btn mx-2">
+                      <a href="/about-us/" class="
+              auth-btn-link
+              d-block
+              text-white
+              bold
+              {%
+              if
+              navbar
+              ==
+              'aboutus'
+              %}active{%
+              endif
+              %}
+            ">our opinion</a
+          >
+        </li>
+  
+        <li class="auth-btn mx-2">
+          <a
+            href="/courses/"
+            class="
+              auth-btn-link
+              d-block
+              text-white
+              bold
+              {%
+              if
+              navbar
+              ==
+              'courses'
+              %}active{%
+              endif
+              %}
+            "
+            >courses</a
+          >
+        </li>
+  
+        
+        <li class="auth-btn mx-2">
+          <a
+            href="/user/login/"
+            class="auth-btn-link d-block text-white bold"
+            >login</a
+          >
+        </li>
+  
+        <li class="auth-btn mx-2">
+          <a
+            href="/user/register/"
+            class="auth-btn-link d-block text-white bold"
+            >Register</a
+          >
+        </li>
+        
+      </ul>
+    </div>
+    
+  </header>
+  
+
+  
+  
+    
+
+
+
+  <section class="course-section section-padding-y" style="background:#0ddf6b0a">
+    <div class="container-fluid">
+        <div class="row align-items-center py-5">
+
+            <div class="col col-md-6">
+                <h2 class="section-header underline bold my-auto">Courses</h2>
+            </div>
+            <div class="col col-md-6">
+                <div class="text-right">
+                    <a href="/courses/" class="btn px-3">See Course</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4 p-3">
+                <div class="course-card box-shadow">
+                    <div class="thumbnail position-relative">
+
+                        <div class="thumbnail-overlay">
+<!--                                     
+      <div class="chapter-badge bg-danger position-absolute d-flex align-items-center justify-content-between">
+        <img
+          class="icon"
+          src="/source/main/static/images/icons/chapter.svg"
+        />
+        <span class="text-white">
+          অধ্যায় - ৯
+        </span>
+      </div>
+       -->
+                            <div class="course-enroll p-3">
+                                <h3 class="course-title text-white m-0">Development of politics</h3>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="course-card-body p-4 bg-white">
+                        <div class="course-description">
+                            <h4 class="description-title mb-3">About Course</h4>
+                            <p class="description mb-3">Are people born as leaders or do they have to become leaders? Democracies have been operating for hundreds of years since the answer to this question is to become a leader. A democratic society chooses its leaders for the people...</p>
+                        </div>
+                        <div class="cta-container">
+
+                            <a href="/courses/23/chapters" class="text-muted px-3 py-2 position-relative">
+        See Details
+        <span class="chevron-icon">
+
+        </span>
+      </a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="col-md-4 p-3">
+                <div class="course-card box-shadow">
+                    <div class="thumbnail position-relative">
+                        <!-- <img class="img-fluid" src="../pic2.jpg" /> -->
+
+                        <div class="thumbnail-overlay">
+                            <!-- 
+      <div class="chapter-badge bg-danger position-absolute d-flex align-items-center justify-content-between">
+        <span class="text-white">
+          lesson-6
+        </span>
+      </div>
+       -->
+                            <div class="course-enroll p-3">
+                                <h3 class="course-title text-white m-0">Effective practice of political parties</h3>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="course-card-body p-4 bg-white">
+                        <div class="course-description">
+                            <h4 class="description-title mb-3">course details</h4>
+                            <p class="description mb-3">
+                                A strong democracy requires sound internal political practices of political parties. The way parties conduct internal political processes is how they represent the people and the country.</div>
+                        <div class="cta-container">
+
+                            <a href="/courses/21/chapters" class="text-muted px-3 py-2 position-relative">
+        see details
+        <span class="chevron-icon">
+
+        </span>
+      </a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="col-md-4 p-3">
+                <div class="course-card box-shadow">
+                    <div class="thumbnail position-relative">
+                        <div class="thumbnail-overlay">
+                            <!-- 
+      <div class="chapter-badge bg-danger position-absolute d-flex align-items-center justify-content-between">
+       
+        <span class="text-white">
+          lesson-5
+        </span>
+      </div>
+       -->
+                            <div class="course-enroll p-3">
+                                <h3 class="course-title text-white m-0">Conflict management and resolution</h3>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="course-card-body p-4 bg-white">
+                        <div class="course-description">
+                            <h4 class="description-title mb-3">About courses</h4>
+                            <p class="description mb-3">Conflict is a natural reality in politics. Politics determines how power is distributed, resources are allocated, and the rules governing society are created. When people compete for power</div>
+                        <div class="cta-container">
+
+                            <a href="/courses/19/chapters" class="text-muted px-3 py-2 position-relative">
+        see details
+        <span class="chevron-icon">
+        </span>
+      </a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="col-md-4 p-3">
+                <div class="course-card box-shadow">
+                    <div class="thumbnail position-relative">
+                        <img class="img-fluid" src="../1.svg" />
+
+                        <div class="thumbnail-overlay">
+                            <!-- 
+      <div class="chapter-badge bg-danger position-absolute d-flex align-items-center justify-content-between">
+       
+        <span class="text-white">
+          lesson- 6
+        </span>
+      </div>
+       -->
+                            <div class="course-enroll p-3">
+                                <h3 class="course-title text-white m-0">Political empowerment of women</h3>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card-body p-4 bg-white">
+                        <div class="course-description">
+                            <h4 class="description-title mb-3">Course Description</h4>
+                            <p class="description mb-3">Political parties are the most basic and appropriate structure for involving women in politics. The practices, policies and values of political parties have a profound effect on women's political participation and representation.</p>
+                        </div>
+                        <div class="cta-container">
+
+                            <a href="/courses/22/chapters" class="text-muted px-3 py-2 position-relative">
+        see more
+        <span class="chevron-icon">
+          
+        </span>
+      </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 p-3">
+                <div class="course-card box-shadow">
+                    <div class="thumbnail position-relative">
+                        <img class="img-fluid" src="../2.svg" />
+
+                        <div class="thumbnail-overlay">
+                            <!-- 
+      <div class="chapter-badge bg-danger position-absolute d-flex align-items-center justify-content-between">
+        
+        <span class="text-white">
+          lesson- 4
+        </span>
+      </div>
+       -->
+                            <div class="course-enroll p-3">
+                                <h3 class="course-title text-white m-0">Democracy and elections</h3>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card-body p-4 bg-white">
+                        <div class="course-description">
+                            <h4 class="description-title mb-3">Course Description</h4>
+                            <p class="description mb-3">To develop a democratic system, political workers should first know what democracy is, why it is needed and what are the functions and responsibilities of political parties. The Democracy and Elections course covers how democracy works, why..</p>
+                        </div>
+                        <div class="cta-container">
+
+                            <a href="/courses/24/chapters" class="text-muted px-3 py-2 position-relative">
+        see more
+        <span class="chevron-icon">
+         
+        </span>
+      </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="col-md-4 p-3">
+                <div class="course-card box-shadow">
+                    <div class="thumbnail position-relative">
+                        <img class="img-fluid" src="../3.svg" />
+
+                        <div class="thumbnail-overlay">
+                            <!-- 
+      <div class="chapter-badge bg-danger position-absolute d-flex align-items-center justify-content-between">
+       
+        <span class="text-white">
+          see more
+        </span>
+      </div>
+       -->
+                            <div class="course-enroll p-3">
+                                <h3 class="course-title text-white m-0">Political campaigns</h3>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card-body p-4 bg-white">
+                        <div class="course-description">
+                            <h4 class="description-title mb-3">Course Description</h4>
+                            <p class="description mb-3">A fundamental process of democracy is elections, where citizens choose their representatives. In elections, political parties present candidates to the people. Candidates to do this job successfully and.. ...</p>
+                        </div>
+                        <div class="cta-container">
+
+                            <a href="/courses/14/chapters" class="text-muted px-3 py-2 position-relative">
+        see more
+        <span class="chevron-icon">
+          
+        </span>
+      </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 p-3">
+                <div class="course-card box-shadow">
+                    <div class="thumbnail position-relative">
+                        <img class="img-fluid" src="../4_adobe_express.svg" />
+
+                        <div class="thumbnail-overlay">
+                            <!-- 
+      <div class="chapter-badge bg-danger position-absolute d-flex align-items-center justify-content-between">
+        <img
+          class="icon"
+          src="/source/main/static/images/icons/chapter.svg"
+        />
+        <span class="text-white">
+          lesson-9
+        </span>
+      </div>
+       -->
+                            <div class="course-enroll p-3">
+                                <h3 class="course-title text-white m-0">Advocacy</h3>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card-body p-4 bg-white">
+                        <div class="course-description">
+                            <h4 class="description-title mb-3">Course Description</h4>
+                            <p class="description mb-3">Advocacy is an important component of a thriving democracy. It is a tool for political leaders and civic workers to provide better services to the people. Advocacy is like that</p>
+                        </div>
+                        <div class="cta-container">
+
+                            <a href="/courses/18/chapters" class="text-muted px-3 py-2 position-relative">
+        see more
+        <span class="chevron-icon">
+         
+        </span>
+      </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- start -->
+            <div class="col-md-4 p-3">
+                <div class="course-card box-shadow">
+                    <div class="thumbnail position-relative">
+                        <img class="img-fluid" src="../5_adobe_express.svg" />
+
+                        <div class="thumbnail-overlay">
+                            <!-- 
+      <div class="chapter-badge bg-danger position-absolute d-flex align-items-center justify-content-between">
+        <img
+          class="icon"
+          src="/source/main/static/images/icons/chapter.svg"
+        />
+        <span class="text-white">
+          lesson-9
+        </span>
+      </div>
+       -->
+
+
+       <div class="course-enroll p-3">
+        <h3 class="course-title text-white m-0">Advocacy</h3>
+
+
+    </div>
+</div>
+</div>
+<div class="course-card-body p-4 bg-white">
+<div class="course-description">
+    <h4 class="description-title mb-3">Course Description</h4>
+    <p class="description mb-3">Advocacy is an important component of a thriving democracy. It is a tool for political leaders and civic workers to provide better services to the people. Advocacy is like that</p>
+</div>
+<div class="cta-container">
+
+    <a href="/courses/18/chapters" class="text-muted px-3 py-2 position-relative">
+see more
+<span class="chevron-icon">
+
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- start -->
+<div class="col-md-4 p-3">
+<div class="course-card box-shadow">
+<div class="thumbnail position-relative">
+<img class="img-fluid" src="../6_adobe_express.svg" />
+
+<div class="thumbnail-overlay">
+
+
+
+
+       <div class="course-enroll p-3">
+        <h3 class="course-title text-white m-0">Advocacy</h3>
+
+
+    </div>
+</div>
+</div>
+<div class="course-card-body p-4 bg-white">
+<div class="course-description">
+    <h4 class="description-title mb-3">Course Description</h4>
+    <p class="description mb-3">Advocacy is an important component of a thriving democracy. It is a tool for political leaders and civic workers to provide better services to the people. Advocacy is like that</p>
+</div>
+<div class="cta-container">
+
+    <a href="/courses/18/chapters" class="text-muted px-3 py-2 position-relative">
+see more
+<span class="chevron-icon">
+
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- start -->
+<div class="col-md-4 p-3">
+<div class="course-card box-shadow">
+<div class="thumbnail position-relative">
+<img class="img-fluid" src="../7_adobe_express.svg" />
+
+<div class="thumbnail-overlay">
+
+
+       <div class="course-enroll p-3">
+        <h3 class="course-title text-white m-0">Advocacy</h3>
+
+
+    </div>
+</div>
+</div>
+<div class="course-card-body p-4 bg-white">
+<div class="course-description">
+    <h4 class="description-title mb-3">Course Description</h4>
+    <p class="description mb-3">Advocacy is an important component of a thriving democracy. It is a tool for political leaders and civic workers to provide better services to the people. Advocacy is like that</p>
+</div>
+<div class="cta-container">
+
+    <a href="/courses/18/chapters" class="text-muted px-3 py-2 position-relative">
+see more
+<span class="chevron-icon">
+
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- start -->
+<div class="col-md-4 p-3">
+<div class="course-card box-shadow">
+<div class="thumbnail position-relative">
+<img class="img-fluid" src="../8_adobe_express.svg" />
+
+<div class="thumbnail-overlay">
+                            <div class="course-enroll p-3">
+                                <h3 class="course-title text-white m-0">Advocacy</h3>
+                               
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card-body p-4 bg-white">
+                        <div class="course-description">
+                            <h4 class="description-title mb-3">Course details</h4>
+                            <p class="description mb-3">Advocacy is an important component of a thriving democracy. It is a tool for political leaders and civic workers to provide better services to the people. Advocacy is like that</p>
+                        </div>
+                        <div class="cta-container">
+
+                            <a href="/courses/18/chapters" class="text-muted px-3 py-2 position-relative">
+        see more
+        <span class="chevron-icon">
+         
+        </span>
+      </a>
+                        </div>
+                    </div>
+                </div>
+            />
+            <!-- end -->
+
+        </div>
+    </div>
+</section>
+<footer class="bg-success footer-container section-padding-y">
+  <div class="container">
+      <div class="row align-content-center">
+          <div class="col-md-6">
+              <div class="di-about">
+                  <a href="#" class="brand">
+                      <img class="img-fluid" src="../e-la.svg" alt="" />
+                  </a>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="footer-link-container pb-5">
+                  <h3 class="footer-link-header bold text-white">Quick links</h3>
+                  <ul class="footer-link-lists">
+                      <li class="footer-link">
+                          <a href="/courses/" class="d-block text-white py-2">Courses</a>
+                      </li>
+                      <li class="footer-link">
+                          <a href="#" class="d-block text-white py-2">Blog</a>
+                      </li>
+
+                      <li class="footer-link">
+                          <a href="#" class="d-block text-white py-2">Terms & Conditions</a>
+                      </li>
+
+                      <li class="footer-link">
+                          <a href="#" class="d-block text-white py-2">Help</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="footer-link-container pb-5">
+                  <h3 class="footer-link-header bold text-white">Social Media</h3>
+                  <!-- social link -->
+                  <ul class="footer-link-lists d-flex justify-content-between">
+                      <li class="footer-link social-media">
+                          <a href="#" class="d-block">
+      <img src="../facebook.png" />
+    </a>
+                      </li>
+                      <li class="footer-link social-media">
+                          <a href="#" class="d-block">
+      <img src="../twitter.png" />
+    </a>
+                      </li>
+
+                      <li class="footer-link social-media">
+                          <a href="#" class="d-block">
+      <img src="../pinterest.png" />
+    </a>
+                      </li>
+                  </ul>
+              </div>
+
+              <div class="footer-link-container">
+                  <h3 class="footer-link-header bold text-white">Email</h3>
+                  <p>
+                      <a href="mailto:website@politicsmatters.com.bd" target="_blank" class="d-block text-white">website@politicsmatters.com.bd</a>
+                  </p>
+              </div>
+          </div>
+      </div>
+
+      <div class="py-4">
+          <p class="text-white" style="font-size: smaller;">
+              “This website is developed in cooperation with the United States Agency for International Development (USAID) through the American people. The content herein is the sole responsibility of Democracy International and does not reflect the views of USAID or the United States Government.
+              does not reflect”
+          </p>
+
+          <!-- <p class="text-black-50" style="font-size: smaller;">
+“Although the UK provides financial support to the work of Democracy International
+The views expressed on this website are not those of the UK Government. It is not necessary that this
+The views expressed on the website are endorsed by the United Kingdom. on this website
+UK is not responsible for the views expressed.।”
+</p> -->
+      </div>
+  </div>
+</footer>
+
+<div class="copyright text-center pb-2 bg-success">
+  <p class="m-0 text-muted">
+      &copy; 2023 Democracy International. All rights reserved.
+  </p>
+</div>
+<script src="/source/main/static/js/app.js"></script>
+</body>
+
+</html>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+<!-- bootstrap js file -->
+<script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
+    
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./politics.css">
+        
+    
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+        <!-- bootstrap css file -->
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+    
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+        />
+        
+        <title> Politics Matters</title>
+               
+    </head>
+    <body>
+    
+        
+    <body class="body scroll-bar">
+          
+         <!-- <img src="poli pic2.jpg" alt="picture"> -->
+    
+        <div class="d-none" id="headerDiv"></div>
+        <header id="primaryMenu" class="bg-success header-padding">
+            <div class="container-fluid">
+                <div class="d-none d-md-block">
+                    <div class="row align-items-center no-gutters desktop-header">
+                        <div class="col-1">
+                          <a href="#" class="brand d-inline-block text-white">
+                            <img
+                            class="img-fluid"
+                             src="../e-la.svg"
+                          />
+                            
+                                    <h3></h3>
+                            </a>
+                        </div>
+                        
+                        <div class="col-6">
+                            <ul class="
+                  auth-container
+                  d-flex
+                  align-items-center
+                  justify-content-center
+                ">
+                
+                <li class="auth-btn mx-2">
+                    <a href="/about-us/" class="
+      auth-btn-link
+      d-block
+      text-white
+      bold
+      {%
+      if
+      navbar
+      ==
+      'aboutus'
+      %}active{%
+      endif
+      %}
+    ">About Us</a
+    >
+     </li>
+    
+              <li class="auth-btn mx-2">
+                  <a href="/Registered-Students/" class="
+    auth-btn-link
+    d-block
+    text-white
+    bold
+    {%
+    if
+    navbar
+    ==
+    'aboutus'
+    %}active{%
+    endif
+    %}
+    ">Registered Students</a
+    >
+    </li>
+    
+    <li class="auth-btn mx-2">
+        
+    </li>
+    <a
+    href="courses.html"
+    class="
+      auth-btn-link
+      d-block
+      text-white
+      bold
+      {%
+      if
+      navbar
+      ==
+      'courses'
+      %}active{%
+      endif
+      %}
+    "
+    >Courses</a
+                  >
+                </li>
+              </ul>
+            </div>
+    
+            <div class="col position-relative">
+              <div class="search-container d-flex bg-white">
+                <form id="searchForm" action="/search" autocomplete="on" class="w-100">
+                  <input type="hidden" name="csrfmiddlewaretoken" value="b3ByIwAo5kI8JWT1g96rxawifpLs3VBF4ejeTYOHMfk69F3szDO3JbKGPUkDcvUP">
+                  <input
+                    type="text"
+                    name="search"
+                    class="form-control search p-0 pl-3 h-100"
+                    id="searchInput"
+                    placeholder="search course"
+                  />
+                </form>
+                <div
+                  class="
+                    search-icon
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    p-3
+                  "
+                >
+                </div>
+              </div>
+              <div id="searchResult" class="position-absolute box-shadow">
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <ul
+                class="
+                  auth-container
+                  d-flex
+                  align-items-center
+                  justify-content-center
+                "
+              >
+                
+                <li class="auth-btn mx-2">
+                  <a
+                    href="login.html"
+                    class="auth-btn-link d-block text-white"
+                    >login</a
+                  >
+                  
+                </li>
+    
+                <li class="auth-btn mx-3">
+                  <a
+                    href="register.html"
+                    class="auth-btn-link d-block text-white"
+                    >Register</a
+                  >
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="no-gutters mobile-header d-block d-md-none">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="">
+              <a href="/" class="brand d-inline-block w-75">
+              </a>
+                        </div>
+    
+                        <div class="">
+                            <div class="menu-bar-icon d-flex">
+                                <div class="search-btn icon m-3" id="searchBtn">
+            
+                                </div>
+                                <div class="menu-btn icon m-3" id="menuBtn">
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="searchBar" class="d-none pt-3">
+                        <div class="search-container d-flex bg-white">
+                            <form id="searchForm" autocomplete="off">
+                                <input type="hidden" name="csrfmiddlewaretoken" value="b3ByIwAo5kI8JWT1g96rxawifpLs3VBF4ejeTYOHMfk69F3szDO3JbKGPUkDcvUP">
+                                <input type="text" name="search" class="form-control search p-0 pl-3 h-100" id="searchInput" placeholder="find course ..." />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="vh-100 mobile-menu-container" id="mobileMenuContainer">
+                <ul class="auth-container">
+                    <li class="auth-btn mx-2">
+                        <a href="/mobilemenu.html/" class="
+                auth-btn-link
+                d-block
+                text-black-50
+                bold
+                {%
+                if
+                navbar
+                ==
+                'home'
+                %}active{%
+                endif
+                %}
+              ">
+              Home
+            </a>
+                    </li>
+    
+                    <li class="auth-btn mx-2">
+                        <a href="/about-us/" class="
+                auth-btn-link
+                d-block
+                text-black-50
+                bold
+                {%
+                if
+                navbar
+                ==
+                'aboutus'
+                %}active{%
+                endif
+                %}
+              ">our opinion</a
+            >
+          </li>
+    
+          <li class="auth-btn mx-2">
+            <a
+              href="/courses/"
+              class="
+                auth-btn-link
+                d-block
+                text-white
+                bold
+                {%
+                if
+                navbar
+                ==
+                'courses'
+                %}active{%
+                endif
+                %}
+              "
+              >courses</a
+            >
+          </li>
+    
+          
+          <li class="auth-btn mx-2">
+            <a
+              href="/user/login/"
+              class="auth-btn-link d-block text-white bold"
+              >login</a
+            >
+          </li>
+    
+          <li class="auth-btn mx-2">
+            <a
+              href="/user/register/"
+              class="auth-btn-link d-block text-white bold"
+              >Register</a
+            >
+          </li>
+          
+        </ul>
+      </div>
+      
+    </header>
+  <title>Registration Page</title>
+  <style>
+    body {
+      background-image: url('https://www.google.com/search?sxsrf=APwXEdcKlifsuPBSXMaFCfICUFLg01Pz-g:1685435033268&q=politics+matters+pic&tbm=isch&source=univ&fir=G8PW-sUxJxouEM%252C5-LsbfjrtZpH_M%252C_%253Bh1ls--gAfzh9mM%252CLUy0kLRbgjuuvM%252C_%253BLcEbLn62gBnJQM%252Cp0oRtROj3eB5vM%252C_%253BAoeJ6cSMUkMcoM%252Ch6MqZEgIVJywUM%252C_%253BWKzBcOtAhM_3UM%252CCfGLojemgEI0tM%252C_%253BOF3Z6_OubBd_DM%252CYaurAxeRJSH5GM%252C_%253BBbHVAriwnmn3aM%252Ch6MqZEgIVJywUM%252C_%253BnsoMsEIJ3kMPMM%252CYlYI1oK5PD_VBM%252C_%253BVPzRmL4Y0J3q4M%252C4lOShYYcFwjgwM%252C_%253BTTyrPbuyw_yfTM%252CYlYI1oK5PD_VBM%252C_&usg=AI4_-kSy6_UUkEtXobu4hAJFuHExsHuq3g&sa=X&ved=2ahUKEwiho8zjzpz_AhUC8DgGHU5wAKEQ7Al6BAgdEBM&biw=1920&bih=961&dpr=1#imgrc=h1ls--gAfzh9mM');
+      background-size: cover;
+    }
+    .container {
+      width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      margin-top: 50px;
+      border-radius: 5px;
+    }
+    .container h2 {
+      text-align: center;
+    }
+    .container input[type="text"],
+    .container input[type="email"],
+    .container input[type="number"],
+    .container input[type="password"],
+    .container select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border-radius: 4px;
+    }
+    .container button {
+      background-color: #c8db17;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 4px;
+    }
+    .container button:hover {
+      background-color: #dbdf0b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Registration Form</h2>
+    <form>
+      <input type="text" name="name" placeholder="Name" required><br>
+      <input type="email" name="email" placeholder="Email" required><br>
+      <input type="text" name="phone" placeholder="Phone Number" required><br>
+      <input type="number" name="age" placeholder="Age" required><br>
+      <select name="gender" required>
+        <option value="" disabled selected>Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select><br>
+      <input type="text" name="education" placeholder="Education" required><br>
+      <input type="text" name="profession" placeholder="Profession" required><br>
+      <input type="text" name="status" placeholder="Status" required><br>
+      <input type="text" name="devision" placeholder="Division" required><br>
+      <input type="text" name="district" placeholder="District" required><br>
+      <input type="text" name="politics_group" placeholder="Politics Group" required><br>
+      <input type="text" name="committee" placeholder="Committee" required><br>
+      <input type="text" name="username" placeholder="Username" required><br>
+      <input type="password" name="password" placeholder="Password" required><br>
+      <input type="password" name="confirm_password" placeholder="Confirm Password" required><br>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
+<footer class="bg-success  section-padding-y">
+  
+  <div class="row align-content-center">
+      <div class="col-md-6">
+          <div class="di-about">
+            <a href="#" class="brand">
+              <img class="img-fluid" src="../e-la.svg" alt="" />
+          </a>
+              
+          </div>
+      </div>
+      <div class="col-md-3">
+        <div class="footer-link-container pb-5">
+            <h3 class="footer-link-header bold text-white">Quick links</h3>
+            <ul class="footer-link-lists">
+                <li class="footer-link">
+                    <a href="/courses/" class="d-block text-white py-2">Courses</a>
+                </li>
+                <li class="footer-link">
+                    <a href="#" class="d-block text-white py-2">Blog</a>
+                </li>
+
+                <li class="footer-link">
+                    <a href="#" class="d-block text-white py-2">Terms & Conditions</a>
+                </li>
+
+                <li class="footer-link">
+                    <a href="#" class="d-block text-white py-2">Help</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="footer-link-container pb-5">
+            <h3 class="footer-link-header bold text-white">Social Media</h3>
+            <!-- social link -->
+            <ul class="footer-link-lists d-flex justify-content-between">
+                <li class="footer-link social-media">
+                    <a href="#" class="d-block">
+      <img src="../facebook.png" />
+    </a>
+                </li>
+                <li class="footer-link social-media">
+                    <a href="#" class="d-block">
+     <img src="../twitter.png" />
+   </a>
+                </li>
+
+                <li class="footer-link social-media">
+                    <a href="#" class="d-block">
+     <img src="../pinterest.png" />
+    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-link-container">
+            <h3 class="footer-link-header bold text-white">Email</h3>
+            <p>
+                <a href="mailto:website@politicsmatters.com.bd" target="_blank" class="d-block text-white">website@politicsmatters.com.bd</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="py-4">
+    <p class="text-white" style="font-size: smaller;">
+        “This website is developed in cooperation with the United States Agency for International Development (USAID) through the American people. The content herein is the sole responsibility of Democracy International and does not reflect the views of USAID or the United States Government.
+        does not reflect”
+    </p>
+
+    <!-- <p class="text-black-50" style="font-size: smaller;">
+“Although the UK provides financial support to the work of Democracy International
+The views expressed on this website are not those of the UK Government. It is not necessary that this
+The views expressed on the website are endorsed by the United Kingdom. on this website
+UK is not responsible for the views expressed.।”
+</p> -->
+</div>
+</div>
+</footer>
+
+<div class="copyright text-center pb-2 bg-success">
+<p class="m-0 text-muted">
+&copy; 2023 Democracy International. All rights reserved.
+</p>
+</div>
+<script src="/source/main/static/js/app.js"></script>
+</body>
+
+</html>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+<!-- bootstrap js file -->
+<script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head><!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="./politics.css">
+      
+  
+      <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+      <!-- bootstrap css file -->
+      <link rel="stylesheet" href="./css/bootstrap.min.css">
+  
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+      />
+      
+      <title> Politics Matters</title>
+             
+  </head>
+  <body>
+  
+      
+  <body class="body scroll-bar">
+        
+       <!-- <img src="poli pic2.jpg" alt="picture"> -->
+  
+      <div class="d-none" id="headerDiv"></div>
+      <header id="primaryMenu" class="bg-success header-padding">
+          <div class="container-fluid">
+              <div class="d-none d-md-block">
+                  <div class="row align-items-center no-gutters desktop-header">
+                      <div class="col-1">
+                        <a href="#" class="brand d-inline-block text-white">
+                          <img
+                          class="img-fluid"
+                           src="../e-la.svg"
+                        />
+                      
+                          
+                                  <h3></h3>
+                          </a>
+                      </div>
+                      
+                      <div class="col-6">
+                          <ul class="
+                auth-container
+                d-flex
+                align-items-center
+                justify-content-center
+              ">
+              
+              <li class="auth-btn mx-2">
+                  <a href="/about-us/" class="
+    auth-btn-link
+    d-block
+    text-white
+    bold
+    {%
+    if
+    navbar
+    ==
+    'aboutus'
+    %}active{%
+    endif
+    %}
+  ">About Us</a
+  >
+   </li>
+  
+            <li class="auth-btn mx-2">
+                <a href="/Registered-Students/" class="
+  auth-btn-link
+  d-block
+  text-white
+  bold
+  {%
+  if
+  navbar
+  ==
+  'aboutus'
+  %}active{%
+  endif
+  %}
+  ">Registered Students</a
+  >
+  </li>
+  
+  <li class="auth-btn mx-2">
+      
+  </li>
+  <a
+  href="courses.html"
+  class="
+    auth-btn-link
+    d-block
+    text-white
+    bold
+    {%
+    if
+    navbar
+    ==
+    'courses'
+    %}active{%
+    endif
+    %}
+  "
+  >Courses</a
+                >
+              </li>
+            </ul>
+          </div>
+  
+          <div class="col position-relative">
+            <div class="search-container d-flex bg-white">
+              <form id="searchForm" action="/search" autocomplete="on" class="w-100">
+                <input type="hidden" name="csrfmiddlewaretoken" value="b3ByIwAo5kI8JWT1g96rxawifpLs3VBF4ejeTYOHMfk69F3szDO3JbKGPUkDcvUP">
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control search p-0 pl-3 h-100"
+                  id="searchInput"
+                  placeholder="search course"
+                />
+              </form>
+              <div
+                class="
+                  search-icon
+                  d-flex
+                  align-items-center
+                  justify-content-center
+                  p-3
+                "
+              >
+              </div>
+            </div>
+            <div id="searchResult" class="position-absolute box-shadow">
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <ul
+              class="
+                auth-container
+                d-flex
+                align-items-center
+                justify-content-center
+              "
+            >
+              
+              <li class="auth-btn mx-2">
+                <a
+                  href="login.html"
+                  class="auth-btn-link d-block text-white"
+                  >login</a
+                >
+                
+              </li>
+  
+              <li class="auth-btn mx-3">
+                <a
+                  href="register.html"
+                  class="auth-btn-link d-block text-white"
+                  >Register</a
+                >
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div class="no-gutters mobile-header d-block d-md-none">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="">
+            <a href="/" class="brand d-inline-block w-75">
+            </a>
+                      </div>
+  
+                      <div class="">
+                          <div class="menu-bar-icon d-flex">
+                              <div class="search-btn icon m-3" id="searchBtn">
+          
+                              </div>
+                              <div class="menu-btn icon m-3" id="menuBtn">
+          
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div id="searchBar" class="d-none pt-3">
+                      <div class="search-container d-flex bg-white">
+                          <form id="searchForm" autocomplete="off">
+                              <input type="hidden" name="csrfmiddlewaretoken" value="b3ByIwAo5kI8JWT1g96rxawifpLs3VBF4ejeTYOHMfk69F3szDO3JbKGPUkDcvUP">
+                              <input type="text" name="search" class="form-control search p-0 pl-3 h-100" id="searchInput" placeholder="find course ..." />
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+  
+          <div class="vh-100 mobile-menu-container" id="mobileMenuContainer">
+              <ul class="auth-container">
+                  <li class="auth-btn mx-2">
+                      <a href="/mobilemenu.html/" class="
+              auth-btn-link
+              d-block
+              text-white
+              bold
+              {%
+              if
+              navbar
+              ==
+              'home'
+              %}active{%
+              endif
+              %}
+            ">
+            Home
+          </a>
+                  </li>
+  
+                  <li class="auth-btn mx-2">
+                      <a href="/about-us/" class="
+              auth-btn-link
+              d-block
+              text-white
+              bold
+              {%
+              if
+              navbar
+              ==
+              'aboutus'
+              %}active{%
+              endif
+              %}
+            ">our opinion</a
+          >
+        </li>
+  
+        <li class="auth-btn mx-2">
+          <a
+            href="/courses/"
+            class="
+              auth-btn-link
+              d-block
+              text-white
+              bold
+              {%
+              if
+              navbar
+              ==
+              'courses'
+              %}active{%
+              endif
+              %}
+            "
+            >courses</a
+          >
+        </li>
+  
+        
+        <li class="auth-btn mx-2">
+          <a
+            href="/user/login/"
+            class="auth-btn-link d-block text-white bold"
+            >login</a
+          >
+        </li>
+  
+        <li class="auth-btn mx-2">
+          <a
+            href="/user/register/"
+            class="auth-btn-link d-block text-white bold"
+            >Register</a
+          >
+        </li>
+        
+      </ul>
+    </div>
+    
+  </header>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About us</title>
+</head>
+<body>
+    <h1>আমাদের  কথা</h1>
+   
+    <style>
+        h1 {
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 1px;
+            width: 100%;
+            height: 6px;
+            background-color: rgb(40, 150, 6); /* Change the color to your desired color */
+        }
+    </style>
+</head>
+<body>
+   
+
+    <p>পলিটিক্স ম্যাটার্স ওয়েবসাইটটি হলো একটি প্রশিক্ষণ প্লাটফর্ম যেখানে রাজনৈতিক কর্মীরা রাজনৈতিক চর্চাসমূহ সমৃদ্ধ করা, নেতৃত্বের উন্নয়ন ঘটানো এবং গণতন্ত্রকে শক্তিশালী করার জন্য আন্তর্জাতিক মানের দক্ষতা ও জ্ঞান অর্জন করতে পারবে। বিশেষজ্ঞদের দ্বারা তৈরি ও পরীক্ষিত এই প্রশিক্ষণ মডিউল সমূহ রাজনৈতিক নেতাদের রাজনৈতিক ক্যারিয়ার উন্নয়নে প্রয়োজনীয় দক্ষতা বৃদ্ধিতে, নারী ও যুবদেরকে রাজনৈতিক প্রক্রিয়ায় তাদের যোগ্য স্থান অর্জনে এবং প্রতিষ্ঠিত রাজনীতিবিদদেরকে তাদের বর্তমান দক্ষতা বৃদ্ধিতে এবং রাজনৈতিক ভাবে আরো এগিয়ে যাবার জন্য নতুন কৌশল জানতে সহায়তা করবে। প্রশিক্ষণসমূহ রাজনৈতিক দলগুলোকে অংশগ্রহণমূলক ও গণতান্ত্রিক করবার মাধ্যমে তাদের অভ্যন্তরীণ কাঠামো এবং প্রক্রিয়াকে আরো উন্নত করবার প্রয়োজনীয় নির্দেশনা প্রদান করবে।</p>
+
+        <p>পলিটিক্স ম্যাটার্স ডেমোক্রেসি ইন্টারন্যাশনাল পরিচালিত স্ট্রেনথেনিং পলিটিকাল ল্যান্ডস্কেপ (এসপিএল) প্রকল্পের একটি অংশ। ইউএসএআইডির অর্থায়নে স্ট্রেনথেনিং পলিটিকাল ল্যান্ডস্কেপ (এসপিএল) প্রকল্পটি রাজনৈতিক দলগুলোর দক্ষতা বৃদ্ধিতে এবং রাজনৈতিক দলগুলোর মাঝে সম্পর্ক শক্তিশালী করবার জন্য কাজ করে। এসপিএল প্রকল্পের আওতায় ডেমোক্রেসি ইন্টারন্যশনাল রাজনৈতিক কর্মী এবং রাজনীতি সচেতন জনগণকে সহায়তা করে:
+        
+        ।</p>
+     
+  <ul>
+    <li>
+      <p>কার্যকর রাজনৈতিক নেতা হতে ও অংশগ্রহণমূলক রাজনৈতিক পরিবেশ সৃষ্টিতে ভূমিকা রাখার জন্য প্রয়োজনীয় দক্ষতা অর্জনে</p>
+    </li>
+    <li>
+      <p>সিদ্ধান্ত গ্রহণ প্রক্রিয়ায় অংশ নেওয়ার জন্য প্রয়োজনীয় দক্ষতা ও জ্ঞান বৃদ্ধি এবং দলীয় কাঠামোর সকল পর্যায়ে ধারাবাহিক ভাবে অন্তর্ভুক্তিমূলক রাজনীতি এবং প্রয়োজনীয় চর্চা সমূহ প্রতিষ্ঠায়</p>
+    </li>
+    <li>
+      <p>গঠনমূলক ভাবে দ্বন্দ্ব নিরসনের জন্য দক্ষতা লাভে</p>
+    </li>
+  </ul>
+  <p>একই সাথে এসপিএল প্রকল্পটি বাংলাদেশের রাজনৈতিক দলগুলোর অভ্যন্তরীণ রাজনৈতিক কাঠামো শক্তিশালী ও সৃসংহত করবার জন্য, অংশগ্রহণমূলক ও প্রতিনিধিত্বশীল নেতৃত্ব বৃদ্ধিতে, রাজনৈতিক দলগুলোকে জনগণের প্রয়োজন জানবার জন্য দক্ষতা বৃদ্ধিতে এবং আরো কার্যকর ভাবে যুব ও নারীদের রাজনৈতিক ক্ষমতায়নের জন্য কাজ করে।</p>
+</body>
+<h4>এসপিএল এর কিছু কাজের উদাহরণ হলো -</h4>
+<ul>
+    <li>
+      <p>রাজনৈতিক দলের অভ্যন্তরীণ কর্মকান্ড যেমন – রাজনৈতিক সম্মেলন, সভা, রাজনৈতিক প্রশিক্ষণ, রাজনৈতিক প্রচারাভিযান কার্যকর ও অংশগ্রহণমূলক করবার জন্য দক্ষতা বৃদ্ধি; সর্বোপরি সিদ্ধান্তগ্রহণ প্রক্রিয়াকে অংশগ্রহণমূলক করা ও দলগুলোর অভ্যন্তরীণ গণতান্ত্রিক প্রক্রিয়াকে শক্তিশালী করা
+    </p>
+    </li>
+    <li>
+      <p>‘নারীর জয় সবার জয়’ ক্যাম্পেইনের আওতায় সংলাপ, এ্যাডভোকেসি, যোগাযোগ ও নেটওয়ার্কিং এর মাধ্যমে রাজনীতিতে নারীদের এগিয়ে নিয়ে আসা এবং নারীর রাজনৈতিক ক্ষমতায়ন</p>
+    </li>
+    <li>
+      <p>ইয়ং লিডার্স ফেলোশিপ প্রোগ্রামের মাধ্যমে তরুণ রাজনৈতিক নেতৃত্বকে দক্ষ ও প্রশিক্ষিত করে তোলা এবং বিভিন্ন রাজনৈতিক ও নীতিনির্ধারণী বিষয়ে জাতীয় ও আঞ্চলিক পর্যায়ের রাজনৈতিক নেতৃত্বের সাথে তাদের যুক্ত হবার সুযোগ তৈরি করে দেওয়া</p>
+    </li>
+    <li>
+      <p>সিনিয়র লিডার্স ফেলোশিপ প্রোগ্রামের মাধ্যমে অভিজ্ঞ ও দায়িত্বশীল রাজনৈতিক নেতাদের জন্য একটি প্লাটফর্ম তৈরি করা যেখানে বিভিন্ন দলের নেতৃবৃন্দ একসাথে সংলাপ ও প্রশিক্ষণে অংশগ্রহণের মাধ্যমে বিভিন্ন প্রয়োজনীয় রাজনৈতিক বিষয় নিয়ে আলোচনার সুযোগ পায়</p>
+    </li>
+  </ul>
+  <p>ডেমোক্রেসি ইন্টারন্যশনাল এর মূল কার্যালয় বা হেড কোয়ার্টার মার্কিন যুক্তরাষ্ট্রের বেথেসডায়। ডেমোক্রেসি ইন্টারন্যাশনাল শান্তিপূর্ণ ও গণতান্ত্রিক পৃথিবী নির্মাণে স্বক্রিয় নাগরিক সমাজ ও রাজনৈতিক সংগঠনসমূহকে সহায়তা করবার জন্য দায়বদ্ধ। নতৃন জ্ঞান, উপকরণ এবং কৌশল সৃষ্টি ও ব্যবহারের মাধ্যমে আমরা বিভিন্ন উন্নয়মূলক সহায়তার মাধ্যমে মানুষের জীবনে ইতিবাচক পরিবর্তন আনি। তার জন্য ডেমোক্রেসি ইন্টারন্যাশনাল মূলত চারটি ক্ষেত্র যেমন : রাজনীতি, সুশাসন, শান্তি এবং শিখন নিয়ে কাজ করে।</p>
+
+
+</html>
+<head>
+  <title>About us</title>
+</head>
+<body>
+  <h1>কোর্স সমূহ</h1>
+ 
+  <style>
+      h1 {
+          position: relative;
+          display: inline-block;
+      }
+
+      h1::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 1px;
+          width: 100%;
+          height: 6px;
+          background-color: rgb(40, 150, 6); /* Change the color to your desired color */
+      }
+  </style>
+</head>
+<body>
+  <body>
+   
+
+    <p>পলিটিক্স ম্যাটার্স ওয়েবসাইটে আটটি সহজবোধ্য এবং প্রয়োজনীয় কোর্স রয়েছে। প্রতিটি কোর্স মডিউলে বিভিন্ন তাত্ত্বিক ও ব্যবহারিক বিষয়ের সাথে সাথে ভিডিও এ্যানিমেশন, ইনফোগ্রাফিক এবং কুইজ রয়েছে। প্রতিটি কোর্স প্রশিক্ষণার্থীদের জন্য উপযোগী করে তৈরি করা হয়েছে যেখানে রাজনৈতিক ও নেতৃত্বের দক্ষতা বৃদ্ধিতে বিভিন্ন জ্ঞান ব্যবহারিক ভাবে রয়েছে যা প্রশিক্ষণার্থীরা সহজেই প্রয়োগ করতে পারবে। ব্যবহারকারীরা কোর্স করবার সময় বিভিন্ন মূল্যায়ন প্রক্রিয়ার মাধ্যমে তাদের শেখার অগ্রগতি বুঝতে পারবে এবং কোর্স শেষ হলে সার্টিফিকেট পাবে।</p>
+ 
+
+    
+    <h3>যে সব বিষয়ে কোর্স থাকছে :</h3>
+    <h4>গণতন্ত্র ও নির্বাচন</h4>
+    
+    
+      
+      <p>রাজনৈতিক দলের অভ্যন্তরীণ কর্মকান্ড যেমন – রাজনৈতিক সম্মেলন, সভা, রাজনৈতিক প্রশিক্ষণ, রাজনৈতিক প্রচারাভিযান কার্যকর ও অংশগ্রহণমূলক করবার জন্য দক্ষতা বৃদ্ধি; সর্বোপরি সিদ্ধান্তগ্রহণ প্রক্রিয়াকে অংশগ্রহণমূলক করা ও দলগুলোর অভ্যন্তরীণ গণতান্ত্রিক প্রক্রিয়াকে শক্তিশালী করা
+    </p>
+    
+    <h4>দ্বন্দ্ব নিরসন</h4>
+    
+    
+      
+      <p>দ্বন্দ্ব রাজনীতিতে একটি স্বাভাবিক বাস্তবতা। রাজনীতি নির্ধারণ করে কীভাবে ক্ষমতার বন্টন হবে, সম্পদের সংস্থান হবে এবং সমাজকে পরিচালনার নিয়ম তৈরি হবে। মানুষ যখন ক্ষমতার জন্য প্রতিযোগিতায় নামে তখন দ্বন্দ্ব সৃষ্টি হয়। দ্বন্দ্ব নিরসন কোর্সটি রাজনৈতিক দ্বন্দ্বের শেকড়কে বিশ্লেষণ ও বুঝবার জন্য কার্যকর চর্চাগুলোকে জানায়। এই কোর্সটি করবার মাধ্যমে রাজনৈতিক কর্মীরা দ্বন্দ্ব নিরসনের ও ব্যবস্থাপনার কার্যকর কৌশল ও পদ্ধতি গুলো জানতে পারবে।
+    </p>
+    
+    <h4>গণতন্ত্র ও নির্বাচন</h4>
+    
+    
+      
+      <p>রাজনৈতিক দলের অভ্যন্তরীণ কর্মকান্ড যেমন – রাজনৈতিক সম্মেলন, সভা, রাজনৈতিক প্রশিক্ষণ, রাজনৈতিক প্রচারাভিযান কার্যকর ও অংশগ্রহণমূলক করবার জন্য দক্ষতা বৃদ্ধি; সর্বোপরি সিদ্ধান্তগ্রহণ প্রক্রিয়াকে অংশগ্রহণমূলক করা ও দলগুলোর অভ্যন্তরীণ গণতান্ত্রিক প্রক্রিয়াকে শক্তিশালী করা
+    </p>
+    </li>
+    <h4>রাজনৈতিক প্রচারাভিযান</h4>
+    
+   
+      
+      <p>গণতন্ত্রের একটি মৌলিক প্রক্রিয়া হলো নির্বাচন, যেখানে নাগরিকেরা তাদের প্রতিনিধি বেছে নেয়। নির্বাচনে রাজনৈতিক দলগুলো জনগণের সামনে প্রার্থীকে উপস্থাপন করে। এই কাজটি সফল ভাবে করবার জন্য প্রার্থী এবং রাজনৈতিক দলকে কার্যকর প্রচার পরিকল্পনা করতে হয় যা দল/ প্রার্থী নির্বাচনে জয়ী হলে জনগণের জন্য কী কী করবে এবং প্রার্থীর যোগ্যতাকে যথাযথভাবে তুলে ধরে। কোর্সটিতে রাজনৈতিক প্রচারাভিযানের ছয়টি ধাপ সম্পর্কে জানা যাবে যার মাধ্যমে সফল প্রচারাভিযান পরিকল্পনা ও পরিচালনা করা সম্ভব।
+    </p>
+    
+    <h4>এ্যাডভোকেসি</h4>
+    
+    
+      
+      <p>রাজনৈতিক দলের কাজ কেবল নির্বাচনের দিনেই শেষ হয়ে যায় না। রাজনীতিবিদদের সার্বক্ষণিকভাবে জনগণের সাথে সম্পৃক্ততা ও যোগাযোগ রাখতে হয়। এই কোর্সটি রাজনীতিবিদদেরকে স্থানীয় সমস্য সমাধানে নাগরিকদের সাথে একসাথে কাজ করবার কার্যকর কৌশল গুলো জানায়। কোর্সটি এ্যাডভোকেসি চক্রের মাধ্যমে এ্যাডভোকেসির প্রক্রিয়াকে বুঝতে সহায়তা করে।
+    </p>
+    
+    <h4>নারীর রাজনৈতিক ক্ষমতায়ন</h4>
+    
+    
+      
+      <p>রাজনৈতিক দল হলো নারীকে রাজনীতিতে যুক্ত করবার জন্য সবচেয়ে প্রাথমিক ও উপযুক্ত কাঠামো। নারীর রাজনৈতিক অংশগ্রহণ এবং প্রতিনিধিত্বের উপর রাজনৈতিক দলসমূহের চর্চা, নীতিমালা এবং মূল্যবোধের গভীর প্রভাব রয়েছে। নারীর রাজনৈতিক ক্ষমতায়ন কোর্সটি কেন এবং কীভাবে রাজনৈতিক প্রক্রিয়াকে নারীর জন্য অংশগ্রহণমূলক করা যায় এবং রাজনৈতিক দলের সকল পর্যায়ের কমিটি সমূহে নারীর অন্তর্ভুক্তি বৃদ্ধি করা যায় সে বিষয়ে গুরুত্ব দেয়।
+    </p>
+    
+    <h4>রাজনৈতিক দলের কার্যকর চর্চা</h4>
+    
+   
+      
+      <p>শক্তিশালী গণতন্ত্রের জন্য প্রয়োজন রাজনৈতিক দলগুলোর সুষ্ঠু অভ্যন্তরীণ রাজনৈতিক চর্চা। দলগুলো যেভাবে অভ্যন্তরীণ রাজনৈতিক প্রক্রিয়াসমূহ পরিচালনা করে তা হলো তারা কীভাবে জনগণকে প্রতিনিধিত্ব করবে এবং দেশ পরিচালনা করবে তার নির্ধারক। এই কোর্সটি রাজনৈতিক দলকে অভ্যন্তরীণভাবে আরো গণতান্ত্রিক, স্বচ্ছ ও জবাবদিহিতাপূর্ণ হবার এবং রাজনৈতিক যোগাযোগ বৃদ্ধির প্রয়োজনীয় কৌশল রউন্রও পদ্ধতি জানায়।
+    </p>
+    
+    <h4>রাজনৈতিক নেতৃত্বের উন্নয়ন</h4>
+   
+      
+        
+        <p>মানুষ কি নেতা হিসেবেই জন্ম নেয় নাকি নেতা হয়ে উঠতে হয়? এই প্রশ্নের উত্তরটি নেতা হয়ে উঠতে হয় ধরেই শত বছর ধরে গণতন্ত্র পরিচালিত হয়ে আসছে। একটি গণতান্ত্রিক সমাজ তার নেতাদের বেছে নেয় কে জনগণের জন্য বেশি উপযোগী পরিকল্পনা এবং বেশি কাজ করার যোগ্যতা রাখে সেই বিবেচনা থেকে। এই কোর্সটি আদর্শ নেতা হবার জন্য কী কী দক্ষতা প্রয়োজন সে বিষয়ে ধারণা দেয় এবং রাজনৈতিক ক্যারিয়ার তৈরির প্রয়োজনীয় কৌশলগুলো জানায়।
+      </p>
+      
+      <h4>প্রশিক্ষকের জন্য প্রশিক্ষণ</h4>
+      
+        
+          
+          <p>দলের ভেতর এবং গণতান্ত্রিক কাঠামোতে কার্যকর চর্চাগুলো টিকিয়ে রাখার জন্য রাজনৈতিক কর্মীদের অর্জিত দক্ষতাগুলোকে সকলের মাঝে বিশেষত পরবর্তী প্রজন্মে ছড়িয়ে দেওয়ার দক্ষতা থাকতে হয়। প্রশিক্ষকের জন্য প্রশিক্ষণ কোর্সটি এই দক্ষতাগুলোকে জানায় যা রাজনীতিবিদদের দীর্ঘমেয়াদী উন্নয়নে সহায়তা করবে। এই কোর্সটি প্রাপ্তবয়স্করা কীভাবে শেখে, ক্লাসরুমের লেকচার দেওয়া ও প্রশিক্ষণ নেওয়ার মাঝে কী পার্থক্য রয়েছে এবং আদর্শ প্রশিক্ষকের কী কী দক্ষতা থাকা উচিত এই বিষয় সমূহে গুরুত্ব দেয়।
+        </p>
+        </li>
+        </ul>
+
+
+        <footer class="bg-success  section-padding-y">
+  
+          <div class="row align-content-center">
+              <div class="col-md-6">
+                  <div class="di-about">
+                <a href="#" class="brand">
+          <img class="img-fluid" src="../e-la.svg" alt="" />
+      </a>
+                  </div>
+              </div>
+              <div>
+              <div class="col-md-3">
+                  <div class="footer-link-container pb-5">
+                      <h3 class="footer-link-header bold text-white">Quick links</h3>
+                      <ul class="footer-link-lists">
+                          <li class="footer-link">
+                              <a href="/courses/" class="d-block text-white py-2">Courses</a>
+                          </li>
+                          <li class="footer-link">
+                              <a href="#" class="d-block text-white py-2">Blog</a>
+                          </li>
+        
+                          <li class="footer-link">
+                              <a href="#" class="d-block text-white py-2">Terms & Conditions</a>
+                          </li>
+        
+                          <li class="footer-link">
+                              <a href="#" class="d-block text-white py-2">Help</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+            </div>
+              <div class="col-md-3">
+                  <div class="footer-link-container pb-5">
+                      <h3 class="footer-link-header bold text-white">Social Media</h3>
+                      <!-- social link -->
+                     
+                      <ul class="footer-link-lists d-flex justify-content-between">
+                        <li class="footer-link social-media">
+                            <a href="#" class="d-block">
+            <img src="../facebook.png" />
+          </a>
+                        </li>
+                        <li class="footer-link social-media">
+                            <a href="#" class="d-block">
+            <img src="../twitter.png" />
+          </a>
+                        </li>
+      
+                        <li class="footer-link social-media">
+                            <a href="#" class="d-block">
+            <img src="../pinterest.png" />
+          </a>
+                        </li>
+                    </ul>
+                </div>
+      
+                <div class="footer-link-container">
+                    <h3 class="footer-link-header bold text-white">Email</h3>
+                    <p>
+                        <a href="mailto:website@politicsmatters.com.bd" target="_blank" class="d-block text-white">website@politicsmatters.com.bd</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+                      
+        <div class="py-4">
+          <p class="text-white" style="font-size: smaller;">
+              “This website is developed in cooperation with the United States Agency for International Development (USAID) through the American people. The content herein is the sole responsibility of Democracy International and does not reflect the views of USAID or the United States Government.
+              does not reflect”
+          </p>
+      
+          <!-- <p class="text-black-50" style="font-size: smaller;">
+      “Although the UK provides financial support to the work of Democracy International
+      The views expressed on this website are not those of the UK Government. It is not necessary that this
+      The views expressed on the website are endorsed by the United Kingdom. on this website
+      UK is not responsible for the views expressed.।”
+      </p> -->
+      </div>
+      </div>
+      </footer>
+      
+      <div class="copyright text-center pb-2 bg-success">
+      <p class="m-0 text-muted">
+      &copy; 2023 Democracy International. All rights reserved.
+      </p>
+      </div>
+      <script src="/source/main/static/js/app.js"></script>
+      </body>
+      
+      </html>
+      
+      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+      
+      <!-- bootstrap js file -->
+      <script src="./js/bootstrap.min.js"></script>
+      </body>
+      </html>
+      
+      </body>
+      </html>
+      
+      
+      
+        
+        
+        
+      
+      
+
+   
+</body>
+</html>

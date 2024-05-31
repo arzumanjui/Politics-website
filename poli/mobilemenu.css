@@ -1,0 +1,38 @@
+/* Mobile menu icon */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+  }
+  
+  /* Mobile menu */
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  /* Media queries */
+  @media only screen and (max-width: 600px) {
+    /* Display the menu icon on small screens */
+    .menu-icon {
+      display: block;
+    }
+  
+    /* Hide the regular menu */
+    .menu {
+      display: none;
+    }
+  }
+  
